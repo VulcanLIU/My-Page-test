@@ -23,7 +23,7 @@
 
     if (navigator.mediaDevices.getUserMedia) {
         //最新的标准API
-        navigator.mediaDevices.getUserMedia({video : {width: 1280, height: 720 }}).then(success).catch(error);
+        navigator.mediaDevices.getUserMedia({video : {width: 1280, height: 720,facingMode: { exact: "environment" }}}).then(success).catch(error);
     } else if (navigator.webkitGetUserMedia) {
         //webkit核心浏览器
         navigator.webkitGetUserMedia({video : {width: 1000, height: 1000}},success, error)
