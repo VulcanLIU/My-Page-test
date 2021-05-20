@@ -1,26 +1,74 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-<style>
-#container {
-  width: 400px;
-  height: 400px;
-  position: relative;
-  background: yellow;
-}
-#animate {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background: red;
-}
-</style>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: myfirst 5s;
+            animation-iteration-count: infinite;
+            image-orientation: inherit;
+        }
+        
+        img{
+            src: 20210520.jpg;
+            width:340;
+            height:296;
+        }
+
+        @keyframes myfirst {
+            from {
+                background: red;
+                width: 100px;
+            }
+
+            to {
+                background: yellow;
+                width: 200px;
+            }
+        }
+
+        @keyframes myfi {
+            from {
+                background: yellow;
+                width: 200px;
+            }
+
+            to {
+                background: yellow;
+                width: 200px;
+            }
+        }
+
+        @-webkit-keyframes myfirst
+
+        /* Safari and Chrome */
+            {
+            from {
+                background: red;
+                width: 100px;
+            }
+
+            to {
+                background: yellow;
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
 <body>
 
-<h1>我的第一个 JavaScript 动画</h1>
+    <p><b>注意:</b> 该实例在 Internet Explorer 9 及更早 IE 版本是无效的。</p>
 
-<div id="container">
-<div id="animate"></div>
-</div>
+    <div>
+       
+    </div>
 
 </body>
+
 </html>

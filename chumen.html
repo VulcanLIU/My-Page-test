@@ -2,49 +2,71 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title> 沈阳航空航天大学出入登记 </title>
+    <meta charset="utf-8">
+    <title> 沈阳航空航天大学出入登记 </title>
+
+    <style>
+    #animated_div
+    {
+    color:#ffffff;
+    position:relative;
+    font-weight:bold;
+    font-size:20px;
+    padding:10px;
+    animation:animated_div 5s 1;
+    animation-iteration-count: infinite;
+    }
+
+    @keyframes animated_div
+    {
+    0% {transform: scale(0.2);}
+    25% {transform: scale(0.2);}
+    50% {transform: scale(0.3);}
+    55% {transform: scale(0.3);}
+    70% {transform: scale(0.2);}
+    100% {transform: scale(0.2);}
+    }
+    </style>
 </head>
 
 <body style="background-color:white;font-family:arial;">
 
-	<div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
-		<font color="#71D0FF"> 沈航学生出门登记 </font>
+    <div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
+        <font color="#71D0FF"> 沈航学生出门登记 </font>
 
-	</div>
+    </div>
+    
+    <div id="animated_div" style="background-color:#ffffff;clear:both;text-align:center;">
+        <p color="#71D0FF"> 沈航学生出门登记 </p>
+        <img src="20210520.jpg" alt="runoob.com" width="200" height="200">
+        </img>
+    </div>
 
-	<div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
-		<img src="20210520.jpg" alt="runoob.com" width="200" height="200">
+    <div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
 
-		</img>
-	</div>
+        <font id="ymd" color="#71D0FF"> </font>
+        <p id="ymd"></p>
 
-	<div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
-		
-		<font id="ymd" color="#71D0FF"> </font>
-		<p id="ymd"></p>
-	
-		<script>
-		function mytime() {	
-			var date = new Date()<!--获得日期数据-->
-			var y = date.getFullYear();<!--年-->
-			var m = date.getMonth()+1;<!--月，这里的月份必须要+1才是当前月份-->
-			var d = date.getDate(); <!--日，getDay是获得当前星期几（0-6），getDate是获得当前日期-->
-			
-			var h = date.getHours();
-			var min = date.getMinutes();
-			var s = date.getSeconds();
-			document.getElementById("ymd").innerHTML = "时间："+y+"-0"+m+"-"+d +" "+ h +":"+min+":"+s;
-		}
-	
-		setInterval(function () { mytime() }, 1000);
-		</script>
-	</div>
+        <script>
+            function mytime() {
+                var date = new Date()
+                var y = date.getFullYear();
+                var m = date.getMonth() + 1;
+                var d = date.getDate();
+                var h = date.getHours();
+                var min = date.getMinutes();
+                var s = date.getSeconds();
+                document.getElementById("ymd").innerHTML = "时间：" + y + "-0" + m + "-" + d + " " + h + ":" + min + ":" + s;
+            }
 
-	<div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
-		<font color="#71D0FF"> 今天第三次进门 </font>
+            setInterval(function () { mytime() }, 1000);
+        </script>
+    </div>
 
-	</div>
+    <div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
+        <font color="#71D0FF"> 今天第三次进门 </font>
+
+    </div>
 </body>
 
 </html>
