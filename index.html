@@ -39,7 +39,9 @@
 		#a3 {
 			color: #ffffff;
 			position: relative;
+			font-weight: 540;
 			padding: 15px;
+			margin: 0px;
 		}
 
 	</style>
@@ -54,17 +56,14 @@
 
 	</div>
 
-	<div id="animated_div" style="background-color:#ffffff;clear:both;text-align:center;height:400px;">
+	<div id="animated_div" style="background-color:#ffffff;clear:both;text-align:center;height:300px;">
 
 		<img id="img" src="20210520.jpg" width="340" height="296">
 		</img>
 	</div>
-
 	<div id="a2" style="background-color:#ffffff;clear:both;text-align:center;font-size:22px;">
-
-		<font id="ymd" color="#71D0FF"> </font>
-		<p id="ymd"></p>
-
+		<p id="ymd" style="color:#71D0FF;"></p>
+		<p style="color:#71D0FF;"> 今天第3次使用进门 </p>
 		<script type="text/javascript">
 			function mytime() {
 				var date = new Date();
@@ -88,11 +87,8 @@
 				document.getElementById("ymd").innerHTML = "时间：" + y + "-" + m + "-" + d + " " + h + ":" + min + ":" + s;
 			}
 
-			setInterval(function () { mytime() }, 1000);
+			setInterval(function () { mytime() }, 500);
 		</script>
-
-		<font color="#71D0FF"> 今天第3次使用进门 </font>
-
 	</div>
 
 	<div id="a3"
