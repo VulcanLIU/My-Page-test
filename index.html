@@ -3,8 +3,11 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<title> 沈阳航空航天大学出入登记 </title>
+	
 </head>
+
 
 <body style="background-color:white;font-family:arial;">
 
@@ -13,31 +16,44 @@
 
 	</div>
 
-	<div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
-		<img src="20210520.jpg" alt="runoob.com" width="200" height="200">
+	<div id="a1" style = "background:white;text-align:center;">
+		
+	</div>
 
+	<div id="foo" style="background-color:#ffffff;clear:both;text-align:center;" >
+		<img src="20210520.jpg" alt="runoob.com" width="200" height="200">
 		</img>
 	</div>
 
 	<div id="footer" style="background-color:#ffffff;clear:both;text-align:center;">
-		
+
 		<font id="ymd" color="#71D0FF"> </font>
 		<p id="ymd"></p>
-	
-		<script>
-		function mytime() {	
-			var date = new Date()<!--获得日期数据-->
-			var y = date.getFullYear();<!--年-->
-			var m = date.getMonth()+1;<!--月，这里的月份必须要+1才是当前月份-->
-			var d = date.getDate(); <!--日，getDay是获得当前星期几（0-6），getDate是获得当前日期-->
-			
-			var h = date.getHours();
-			var min = date.getMinutes();
-			var s = date.getSeconds();
-			document.getElementById("ymd").innerHTML = "时间："+y+"-"+m+"-"+d +" "+ h +":"+min+":"+s;
-		}
-	
-		setInterval(function () { mytime() }, 1000);
+
+		<script type="text/javascript">
+			function mytime() {
+				var date = new Date();
+				var y = date.getFullYear();
+				var m = date.getMonth() + 1;
+				var d = date.getDate();
+
+				var h = date.getHours();
+				var min = date.getMinutes();
+				var s = date.getSeconds();
+				if (m < 10)
+					m = "0" + m;
+				if (d < 10)
+					d = "0" + d;
+				if (h < 10)
+					h = "0" + h;
+				if (min < 10)
+					min = "0" + min;
+				if (s < 10)
+					s = "0" + s;
+				document.getElementById("ymd").innerHTML = "时间：" + y + "-" + m + "-" + d + " " + h + ":" + min + ":" + s;
+			}
+
+			setInterval(function () { mytime() }, 1000);
 		</script>
 	</div>
 
@@ -45,11 +61,40 @@
 		<font color="#71D0FF"> 今天第三次进门 </font>
 	</div>
 
-	<div id="footer" style="background-color:#06c261;color:#ffffff;clear:both;text-align:center;font-size:5px;line-height:normal;">
-		<p> 姓  名：曲文强</p>
-		<p> 学  号：173406010102</p>
-		<p> 体  温：36.2</p>
-		<p> 电  话：36.2</p>
+	<div id="footer"
+		style="background-color:#06c261;color:#ffffff;clear:both;text-align:center;font-size:5px;line-height:normal;">
+		<p> 姓 名：曲文强</p>
+		<p> 学 号：173406010102</p>
+		<p> 体 温：36.2</p>
+		<p> 电 话：17702431774</p>
+		<p> 有效期限：<span id="y"> </span></p>
+		<script>
+			var date = new Date();
+			var y = date.getFullYear();
+			var m = date.getMonth() + 1;
+			var d = date.getDate();
+
+			var h = date.getHours();
+			var min = date.getMinutes();
+			var s = date.getSeconds();
+			if (m < 10)
+				m = "0" + m;
+			if (d < 10)
+				d = "0" + d;
+			if (h < 10)
+				h = "0" + h;
+			if (min < 10)
+				min = "0" + min;
+			if (s < 10)
+				s = "0" + s;
+			document.getElementById("y").innerHTML = y + "-" + m + "-" + d + "--" + y + "-" + m + "-" + d;
+		</script>
+		<p> 联系人：曲文强</p>
+	</div>
+
+	<div id="footer"
+		style="background-color:#ffffff;color:#7B7B7B;clear:both;text-align:center;font-size:5px;line-height:normal;">
+		<p> 信息网络中心提供相关技术支持</p>
 	</div>
 
 </body>
